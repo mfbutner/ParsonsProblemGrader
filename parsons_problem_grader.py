@@ -49,11 +49,11 @@ def parsons_problem_grader(answer_key: str, student_answer: str):
     return penalties
 
 def main():
-    # answer_key = "APENBIDKMOJGDKHLKCJ"
-    answer_key  = "ECNRBAGFMPQS"
+    # answer_key = "APENBIDKMOJGDKHLKCK" # problem 14
+    answer_key  = "ECNRBAGFMPQS" # problem 11
     with open('Problem11_Submissions.txt') as student_answers:
         for student_answer in student_answers:
-            print(parsons_problem_grader(answer_key, student_answer))
+            print(parsons_problem_grader(answer_key, student_answer.strip()))
 
 if __name__ == '__main__':
     main()
